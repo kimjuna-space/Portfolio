@@ -59,6 +59,28 @@ function useInertialScroll() {
     };
   }, []);
 }
+function useScrollReveals(route) {
+  useEffect(() => {
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const elements = [...document.querySelectorAll("[data-reveal]")];
+    if (reduced) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6%" },
+    );
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [route]);
+}
 function Header() {
   const [visible, setVisible] = useState(true);
   useEffect(() => {
@@ -107,7 +129,7 @@ function Program({ tone, children }) {
 function Feature({ kind }) {
   const pv5 = kind === "pv5";
   return (
-    <section className={`feature ${kind}`}>
+    <section className={`feature ${kind}`} data-reveal>
       {pv5 && (
         <div className="identity">
           <span>입체적 발상으로 다채로운 공간 경험을 만듭니다.</span>
@@ -116,14 +138,14 @@ function Feature({ kind }) {
       )}
       <div className="feature-grid">
         {pv5 && (
-          <figure>
+          <figure data-reveal>
             <img src={A + "home-pv5-table.webp"} />
             <figcaption>
               01 / PLEV · KIA PV5 기반 소형 모빌리티 운송 서비스
             </figcaption>
           </figure>
         )}
-        <div className="feature-copy">
+        <div className="feature-copy" data-reveal>
           <p className="micro">
             {pv5
               ? "EXHIBITION / DIGITAL EXPERIENCE"
@@ -161,7 +183,7 @@ function Feature({ kind }) {
           <a href={pv5 ? routes.pv5 : routes.vr}>프로젝트 보기 ↗</a>
         </div>
         {!pv5 && (
-          <figure>
+          <figure data-reveal>
             <img src={A + "home-vr-architecture.webp"} />
             <figcaption>02 / Layers of Light · VR 공간 전시</figcaption>
           </figure>
@@ -216,12 +238,12 @@ const studies = [
 function Archive() {
   return (
     <section id="archive" className="archive">
-      <div className="label">
+      <div className="label" data-reveal>
         <h2>STUDIES IN MAKING</h2>
         <p>구조 · 재료 · 제작의 기록</p>
       </div>
       {studies.map(([n, title, desc, tools, equipment, imgs]) => (
-        <article key={title}>
+        <article key={title} data-reveal>
           <div>
             <p className="micro">{n}</p>
             <h3>{title}</h3>
@@ -291,7 +313,7 @@ function Footer() {
 }
 function Intro({ vr = false }) {
   return (
-    <section className="intro">
+    <section className="intro" data-reveal>
       <p className="micro">
         {vr
           ? "PROJECT 02 / VIRTUAL EXHIBITION · SPATIAL CONCEPT"
@@ -337,7 +359,7 @@ function Intro({ vr = false }) {
 }
 function Split({ title, sub, children }) {
   return (
-    <section className="split">
+    <section className="split" data-reveal>
       <div>
         <h2>{title}</h2>
         <h3>{sub}</h3>
@@ -352,7 +374,7 @@ function PV5() {
       <Header />
       <main className="detail">
         <Intro />
-        <figure className="hero">
+        <figure className="hero" data-reveal>
           <img src={A + "pv5-hero.webp"} />
           <figcaption>01 / 전시 전경</figcaption>
         </figure>
@@ -375,7 +397,7 @@ function PV5() {
             탐색하도록 설계했습니다.
           </p>
         </Split>
-        <section className="composition">
+        <section className="composition" data-reveal>
           <h3>Spatial composition</h3>
           <div className="composition-grid">
             <div className="elevation">
@@ -443,14 +465,14 @@ function PV5() {
             </div>
           </div>
         </section>
-        <figure className="exhibition-visual">
+        <figure className="exhibition-visual" data-reveal>
           <img src={A + "pv5-exhibition-visual-compact.webp"} />
           <figcaption>
             02 / 전시 구성 시각화 · 정면 3000W × 2400H, 측면 1000W × 2400H의
             ㄱ자 가벽과 1500W × 600D 테이블
           </figcaption>
         </figure>
-        <section className="sequence">
+        <section className="sequence" data-reveal>
           <h3>브랜드에서 서비스 사용 장면까지</h3>
           <div>
             <ol>
@@ -489,7 +511,7 @@ function PV5() {
             03 / 디지털 접점 구조 · 모바일 접수 → 키오스크 대응 → 정비소 관리
           </p>
         </section>
-        <section className="web-build">
+        <section className="web-build" data-reveal>
           <div>
             <p className="micro">WEB IMPLEMENTATION</p>
             <h2>Interaction without conflict.</h2>
@@ -547,7 +569,7 @@ function VR() {
       <Header />
       <main className="detail vr-detail">
         <Intro vr />
-        <figure className="hero">
+        <figure className="hero" data-reveal>
           <img src={A + "vr-hero.webp"} />
           <figcaption>
             01 / 입구에서 중심 전시와 다음 공간을 함께 바라보는 장면
@@ -572,7 +594,7 @@ function VR() {
             공간으로 이동하는 순서로 전시를 탐색하도록 구성했습니다.
           </p>
         </Split>
-        <section className="route">
+        <section className="route" data-reveal>
           <h3>발견 → 집중 → 전환으로 이어지는 공간 구성</h3>
           <div>
             <div className="plan">
@@ -599,7 +621,7 @@ function VR() {
             </div>
           </div>
         </section>
-        <figure className="wide">
+        <figure className="wide" data-reveal>
           <img src={A + "vr-experience.webp"} />
           <figcaption>
             02 / 원형 개구부 너머로 다음 장면을 예고하는 시점
@@ -621,7 +643,7 @@ function VR() {
             시점으로 다시 만나도록 구성했습니다.
           </p>
         </Split>
-        <section className="material">
+        <section className="material" data-reveal>
           <figure>
             <img src={A + "vr-detail.webp"} />
             <figcaption>03 / 커튼의 투과성과 단단한 개구부의 대비</figcaption>
@@ -667,6 +689,7 @@ function Home() {
 function App() {
   useInertialScroll();
   const r = useRoute();
+  useScrollReveals(r);
   return r === "portfolio-2" ? (
     <PV5 />
   ) : r === "portfolio-3" ? (

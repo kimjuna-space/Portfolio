@@ -195,3 +195,64 @@ footer h2 {
 footer p {
   line-height: 1.66;
 }
+
+/* Motion: quiet editorial reveals, with hover feedback only where the user can act. */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity .72s cubic-bezier(.22, .61, .36, 1), transform .72s cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.feature [data-reveal] { transition-delay: .12s; }
+.feature [data-reveal] + [data-reveal] { transition-delay: .22s; }
+.archive article:nth-of-type(2) { transition-delay: .06s; }
+.archive article:nth-of-type(3) { transition-delay: .1s; }
+.archive article:nth-of-type(4) { transition-delay: .14s; }
+
+.feature figure img,
+.study-frame img,
+.hero img,
+.wide img,
+.exhibition-visual img,
+.sequence-image img,
+.material figure img {
+  transition: transform .65s cubic-bezier(.22, .61, .36, 1), filter .45s ease;
+}
+.feature figure:hover img,
+.study-frame:hover img,
+.hero:hover img,
+.wide:hover img,
+.exhibition-visual:hover img,
+.sequence-image:hover img,
+.material figure:hover img {
+  transform: translate3d(0, -4px, 0);
+  filter: contrast(1.02);
+}
+.feature-copy > a,
+.project-link,
+nav a,
+footer a {
+  transition: color .24s ease, opacity .24s ease, transform .24s ease, border-color .24s ease, background .24s ease;
+}
+.feature-copy > a:hover,
+footer a:hover { color:#35543c; transform:translateX(4px); }
+nav a:hover { color:var(--strong); }
+nav a:hover::after {
+  content:"";
+  display:block;
+  width:100%;
+  height:2px;
+  margin-top:3px;
+  background:#dcebe0;
+  animation: navHighlight .28s ease both;
+}
+@keyframes navHighlight { from { transform:scaleX(0); transform-origin:left; } to { transform:scaleX(1); transform-origin:left; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+  [data-reveal], [data-reveal].is-visible { opacity:1; transform:none; }
+}
