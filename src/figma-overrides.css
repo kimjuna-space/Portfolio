@@ -131,3 +131,52 @@ footer h2 { font-size:26px; letter-spacing:-.03em; }
 .exhibition-visual img {
   background: transparent !important;
 }
+
+/* Reading rhythm — tighter headings, calm body copy. */
+body {
+  letter-spacing: -0.025em;
+  line-height: 1.68;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+p, li { letter-spacing: -0.02em; }
+.header>a,
+.feature h1,
+.intro h1,
+.split h2,
+.web-build h2,
+.material h2,
+.label h2,
+footer h2 {
+  letter-spacing: -0.055em;
+}
+.feature h1,
+.intro h1 { line-height: 1.08; }
+.split h2,
+.web-build h2,
+.material h2 { line-height: 1.12; }
+.micro,
+.feature figcaption,
+.hero figcaption,
+.wide figcaption,
+.exhibition-visual figcaption,
+.sequence-caption {
+  letter-spacing: 0.015em;
+  line-height: 1.55;
+}
+.feature-copy>p:not(.micro):not(.tools),
+.intro p:not(.micro),
+.split>div:last-child,
+.sequence li p,
+.route p,
+.material>div>p,
+.web-build .web-lead {
+  line-height: 1.7;
+}
+.facts,
+.composition-grid p,
+.display-specs p,
+.web-build li>p:last-child,
+footer p {
+  line-height: 1.66;
+}
