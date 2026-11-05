@@ -117,7 +117,7 @@ function Feature({ kind }) {
       <div className="feature-grid">
         {pv5 && (
           <figure>
-            <img src={A + "home-pv5-table.png"} />
+            <img src={A + "home-pv5-table.webp"} />
             <figcaption>
               01 / PLEV · KIA PV5 기반 소형 모빌리티 운송 서비스
             </figcaption>
@@ -162,7 +162,7 @@ function Feature({ kind }) {
         </div>
         {!pv5 && (
           <figure>
-            <img src={A + "home-vr-architecture.png"} />
+            <img src={A + "home-vr-architecture.webp"} />
             <figcaption>02 / Layers of Light · VR 공간 전시</figcaption>
           </figure>
         )}
@@ -180,7 +180,7 @@ const studies = [
       <Program tone="cad">AutoCAD</Program>
     </>,
     "CNC 밀링 · 선반",
-    ["cnc-mockup-wide.png", "cnc-process-wide.png", "cnc-result-wide.png"],
+    ["cnc-mockup-wide.webp", "cnc-process-wide.webp", "cnc-result-wide.webp"],
   ],
   [
     "02",
@@ -191,7 +191,7 @@ const studies = [
       <Program tone="cad">AutoCAD</Program>
     </>,
     "실측 · 3D 모델링 · 부품 도면",
-    ["reverse-model-a-wide.png", "reverse-model-b-wide.png", "reverse-drawing-wide.png"],
+    ["reverse-model-a-wide.webp", "reverse-model-b-wide.webp", "reverse-drawing-wide.webp"],
   ],
   [
     "03",
@@ -202,7 +202,7 @@ const studies = [
       <Program tone="keyshot">KeyShot</Program>
     </>,
     "제품 모델링 · 렌더링",
-    ["clock-render.png", "clock-detail.png", "clock-board.jpeg"],
+    ["clock-render.webp", "clock-detail.webp", "clock-board.webp"],
   ],
   [
     "04",
@@ -210,7 +210,7 @@ const studies = [
     "실내와 야외 장면을 모델링하며 빛·재질·시점에 따라 달라지는 공간 인지를 탐구",
     <Program tone="blender">Blender</Program>,
     "3D 모델링 · 재질 · 조명",
-    ["blender-house.png", "blender-outdoor.jpeg"],
+    ["blender-house.webp", "blender-outdoor.webp"],
   ],
 ];
 function Archive() {
@@ -279,7 +279,7 @@ function Footer() {
       </div>
       <div>
         <b>Documents</b>
-        <a href={`${A}resume.png`} target="_blank" rel="noreferrer">
+        <a href={`${A}resume.webp`} target="_blank" rel="noreferrer">
           이력서 바로가기 ↗
         </a>
         <a href={`${A}self-introduction.pdf`} target="_blank" rel="noreferrer">
@@ -353,7 +353,7 @@ function PV5() {
       <main className="detail">
         <Intro />
         <figure className="hero">
-          <img src={A + "pv5-hero.png"} />
+          <img src={A + "pv5-hero.webp"} />
           <figcaption>01 / 전시 전경</figcaption>
         </figure>
         <Split
@@ -444,7 +444,7 @@ function PV5() {
           </div>
         </section>
         <figure className="exhibition-visual">
-          <img src={A + "pv5-exhibition-visual-compact.png"} />
+          <img src={A + "pv5-exhibition-visual-compact.webp"} />
           <figcaption>
             02 / 전시 구성 시각화 · 정면 3000W × 2400H, 측면 1000W × 2400H의
             ㄱ자 가벽과 1500W × 600D 테이블
@@ -482,7 +482,7 @@ function PV5() {
               </li>
             </ol>
             <figure className="sequence-image">
-              <img src={A + "pv5-service-devices.png"} />
+              <img src={A + "pv5-service-devices.webp"} />
             </figure>
           </div>
           <p className="sequence-caption">
@@ -548,7 +548,7 @@ function VR() {
       <main className="detail vr-detail">
         <Intro vr />
         <figure className="hero">
-          <img src={A + "vr-hero.png"} />
+          <img src={A + "vr-hero.webp"} />
           <figcaption>
             01 / 입구에서 중심 전시와 다음 공간을 함께 바라보는 장면
           </figcaption>
@@ -600,7 +600,7 @@ function VR() {
           </div>
         </section>
         <figure className="wide">
-          <img src={A + "vr-experience.png"} />
+          <img src={A + "vr-experience.webp"} />
           <figcaption>
             02 / 원형 개구부 너머로 다음 장면을 예고하는 시점
           </figcaption>
@@ -623,7 +623,7 @@ function VR() {
         </Split>
         <section className="material">
           <figure>
-            <img src={A + "vr-detail.png"} />
+            <img src={A + "vr-detail.webp"} />
             <figcaption>03 / 커튼의 투과성과 단단한 개구부의 대비</figcaption>
           </figure>
           <div>
