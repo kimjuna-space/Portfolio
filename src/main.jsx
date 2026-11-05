@@ -191,7 +191,7 @@ const studies = [
       <Program tone="cad">AutoCAD</Program>
     </>,
     "실측 · 3D 모델링 · 부품 도면",
-    ["reverse-model-a.png", "reverse-model-b.png", "reverse-drawing.png"],
+    ["reverse-model-a-wide.png", "reverse-model-b-wide.png", "reverse-drawing-wide.png"],
   ],
   [
     "03",
