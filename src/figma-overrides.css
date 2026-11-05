@@ -132,9 +132,17 @@ footer h2 { font-size:26px; letter-spacing:-.03em; }
   background: transparent !important;
 }
 
-/* Archive cards keep a common rhythm without cropping the source work. */
-.study-images img {
-  height: clamp(180px, 15vw, 288px);
+/* Archive cards: 4:3 frame, original images untouched. */
+.study-images .study-frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+}
+.study-images .study-frame img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   background: transparent !important;
 }

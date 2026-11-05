@@ -180,7 +180,7 @@ const studies = [
       <Program tone="cad">AutoCAD</Program>
     </>,
     "CNC 밀링 · 선반",
-    ["cnc-mockup-wide.png", "cnc-process-wide.png", "cnc-result-wide.png"],
+    ["cnc-mockup.png", "cnc-process.png", "cnc-result.png"],
   ],
   [
     "02",
@@ -231,7 +231,9 @@ function Archive() {
           </div>
           <div className="study-images">
             {imgs.map((x) => (
-              <img key={x} src={A + x} />
+              <figure className="study-frame" key={x}>
+                <img src={A + x} />
+              </figure>
             ))}
           </div>
         </article>
