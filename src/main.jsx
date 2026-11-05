@@ -180,7 +180,7 @@ const studies = [
       <Program tone="cad">AutoCAD</Program>
     </>,
     "CNC 밀링 · 선반",
-    ["cnc-mockup.png", "cnc-process.png", "cnc-result.png"],
+    ["cnc-mockup-wide.png", "cnc-process-wide.png", "cnc-result-wide.png"],
   ],
   [
     "02",

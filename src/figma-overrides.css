@@ -132,6 +132,13 @@ footer h2 { font-size:26px; letter-spacing:-.03em; }
   background: transparent !important;
 }
 
+/* Archive cards keep a common rhythm without cropping the source work. */
+.study-images img {
+  height: clamp(180px, 15vw, 288px);
+  object-fit: contain;
+  background: transparent !important;
+}
+
 /* Reading rhythm — tighter headings, calm body copy. */
 body {
   letter-spacing: -0.025em;
