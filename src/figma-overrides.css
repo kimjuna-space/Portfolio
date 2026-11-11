@@ -484,3 +484,14 @@ nav a:hover::after {
   .detail .split h2 { font-size:32px; }
   .detail .intro h2 { font-size:17px; }
 }
+
+/* One typeface system: SUIT is used for every Korean and English text element. */
+:root {
+  --font-sans:"SUIT", sans-serif;
+  --font-serif-en:"SUIT", sans-serif;
+  --font-serif-kr:"SUIT", sans-serif;
+}
+body,
+body * {
+  font-family:"SUIT", sans-serif !important;
+}
