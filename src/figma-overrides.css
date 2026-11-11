@@ -213,25 +213,6 @@ footer p {
 .archive article:nth-of-type(3) { transition-delay: .1s; }
 .archive article:nth-of-type(4) { transition-delay: .14s; }
 
-.feature figure img,
-.study-frame img,
-.hero img,
-.wide img,
-.exhibition-visual img,
-.sequence-image img,
-.material figure img {
-  transition: transform .65s cubic-bezier(.22, .61, .36, 1), filter .45s ease;
-}
-.feature figure:hover img,
-.study-frame:hover img,
-.hero:hover img,
-.wide:hover img,
-.exhibition-visual:hover img,
-.sequence-image:hover img,
-.material figure:hover img {
-  transform: translate3d(0, -4px, 0);
-  filter: contrast(1.02);
-}
 .feature-copy > a,
 .project-link,
 nav a,
@@ -376,10 +357,6 @@ nav a:hover::after {
   gap:clamp(24px,4vw,72px);
   margin-top:clamp(72px,9vw,152px);
 }
-.booth-perspective-grid img,
-.booth-drawings img { transition:transform .65s cubic-bezier(.22,.61,.36,1), filter .45s ease; }
-.booth-perspective-grid figure:hover img,
-.booth-drawings figure:hover img { transform:translate3d(0,-4px,0); filter:contrast(1.02); }
 
 @media (max-width:900px) {
   .booth-study { width:calc(100% - 2*var(--gutter)); padding-top:100px; }
