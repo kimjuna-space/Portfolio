@@ -369,7 +369,7 @@ nav a:hover::after {
 
 /* PLEV type scale — Korean serif and sans roles are separated intentionally. */
 :root {
-  --font-sans:"Noto Sans KR", sans-serif;
+  --font-sans:"SUIT", sans-serif;
   --font-serif-en:"Lora", serif;
   --font-serif-kr:"Noto Serif KR", "Batang", serif;
 }
@@ -485,13 +485,5 @@ nav a:hover::after {
   .detail .intro h2 { font-size:17px; }
 }
 
-/* One typeface system: SUIT is used for every Korean and English text element. */
-:root {
-  --font-sans:"SUIT", sans-serif;
-  --font-serif-en:"SUIT", sans-serif;
-  --font-serif-kr:"SUIT", sans-serif;
-}
-body,
-body * {
-  font-family:"SUIT", sans-serif !important;
-}
+/* Sans-serif UI text uses SUIT; editorial serif titles retain their original roles. */
+body { font-family:"SUIT", sans-serif; }
