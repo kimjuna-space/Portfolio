@@ -159,7 +159,7 @@ function Feature({ kind }) {
           </b>
           <p>
             {pv5 ? (
-              "개인 담당 · 웹 구현 100% / 아이디어 논의 참여"
+              "개인 담당 · 웹 구현 100% / 부스 모델링 · 스케일 검토"
             ) : (
               <>
                 빛·투과도·시점의 변화를 관찰하는 전시
@@ -348,7 +348,9 @@ function Intro({ vr = false }) {
                 UI 디자인 2 · 영상·모션 디자인 2<br />
                 기획 1 · 프로그래밍 1
               </p>
-              <p>개인 담당&nbsp;&nbsp;웹 구현 100%</p>
+              <p>
+                개인 담당&nbsp;&nbsp;웹 구현 100% · 부스 모델링 · 관람자 스케일 검토
+              </p>
               <p>공동 참여&nbsp;&nbsp;아이디어 논의 · 전시 구성</p>
             </>
           )}
@@ -405,7 +407,8 @@ function PV5() {
         >
           <p>
             정면 3000 × 2400mm와 측면 1000 × 2400mm의 ㄱ자 가벽, 1500 ×
-            600mm 테이블을 하나의 정보 구조로 구성했습니다.
+            600 × 720mm 모듈 테이블 2개를 결합한 총 3000 × 600 × 720mm
+            테이블을 하나의 정보 구조로 구성했습니다.
           </p>
           <p>
             보행 동선보다 시선의 흐름에 집중했습니다. 정면에서 브랜드와 서비스의
@@ -456,7 +459,7 @@ function PV5() {
           </div>
         </section>
         <section className="composition" data-reveal>
-          <h3>Spatial composition</h3>
+          <h3>Media placement</h3>
           <div className="composition-grid">
             <div className="elevation">
               <p>
@@ -497,11 +500,12 @@ function PV5() {
               <p>01 / 브랜드 인지　　02 / 서비스 이해　　03 / 화면 탐색</p>
             </div>
             <div>
-              <h3>역할별로 분리한 가벽과 테이블</h3>
+              <h3>공간 안에서 화면의 역할을 구분</h3>
               <p>
-                정면 가벽은 멀리서 브랜드와 서비스 전체를 읽는 영역으로, 측면
-                가벽은 서비스 흐름을 정리하는 영역으로 구분했습니다. 테이블 위
-                화면은 관람객이 가까이에서 각 사용 장면을 비교하도록 배치했습니다.
+                부스 모델링으로 확인한 가벽과 테이블의 비례 안에서, 정면 가벽은
+                브랜드와 서비스 전체를 읽는 영역으로 설정했습니다. 테이블 위
+                화면은 가까이에서 각 사용 장면을 비교하도록 역할과 시선 거리를
+                구분해 배치했습니다.
               </p>
               <div className="display-specs">
                 <p>
@@ -523,13 +527,6 @@ function PV5() {
             </div>
           </div>
         </section>
-        <figure className="exhibition-visual" data-reveal>
-          <img src={A + "pv5-exhibition-visual-compact.webp"} />
-          <figcaption>
-            02 / 전시 구성 시각화 · 정면 3000W × 2400H, 측면 1000W × 2400H의
-            ㄱ자 가벽과 1500W × 600D 테이블
-          </figcaption>
-        </figure>
         <section className="sequence" data-reveal>
           <h3>브랜드에서 서비스 사용 장면까지</h3>
           <div>
