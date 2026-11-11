@@ -413,6 +413,48 @@ function PV5() {
             탐색하도록 설계했습니다.
           </p>
         </Split>
+        <section className="booth-study" data-reveal>
+          <div className="booth-study-intro">
+            <div>
+              <p className="micro">EXHIBITION SPATIAL DESIGN</p>
+              <h2>PLEV Booth Study</h2>
+            </div>
+            <p>
+              PLEV 전시를 위한 가벽과 모듈 테이블을 실측 기준으로 모델링하여,
+              관람자 스케일과 전시 요소의 배치 가능 범위를 검토했습니다.
+            </p>
+          </div>
+          <div className="booth-perspective-grid">
+            <figure>
+              <img src={A + "plev-booth-perspective.webp"} />
+              <figcaption>01 / 사시도 · 가벽과 결합 테이블의 전체 비례 검토</figcaption>
+            </figure>
+            <dl className="booth-specs">
+              <div>
+                <dt>WALL</dt>
+                <dd>정면 3000 × 2400mm<br />측면 1000 × 2400mm</dd>
+              </div>
+              <div>
+                <dt>TABLE</dt>
+                <dd>모듈 테이블 2개 결합<br />3000 × 600 × 720mm</dd>
+              </div>
+              <div>
+                <dt>CHECK</dt>
+                <dd>관람자 스케일<br />전시 요소 배치 가능 범위</dd>
+              </div>
+            </dl>
+          </div>
+          <div className="booth-drawings">
+            <figure>
+              <img src={A + "plev-booth-plan.webp"} />
+              <figcaption>02 / 평면도 · ㄱ자 가벽과 테이블의 깊이 관계</figcaption>
+            </figure>
+            <figure>
+              <img src={A + "plev-booth-elevation.webp"} />
+              <figcaption>03 / 정면도 · 관람자와 가벽·테이블의 높이 관계</figcaption>
+            </figure>
+          </div>
+        </section>
         <section className="composition" data-reveal>
           <h3>Spatial composition</h3>
           <div className="composition-grid">
