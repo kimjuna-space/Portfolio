@@ -374,18 +374,34 @@ function PV5() {
       <Header />
       <main className="detail">
         <Intro />
-        <figure className="hero" data-reveal>
-          <img src={A + "pv5-hero.webp"} />
-          <figcaption>01 / 전시 전경</figcaption>
-        </figure>
+        <section className="exhibition-editorial" data-reveal aria-label="PLEV exhibition image layout">
+          <figure className="image-placeholder editorial-wide">
+            <div>전시 전체 전경<br />정면 또는 사선 촬영</div>
+            <figcaption>01 / 전체 구성 · ㄱ자 가벽과 테이블이 함께 보이는 장면</figcaption>
+          </figure>
+          <div className="editorial-row">
+            <figure className="image-placeholder editorial-tall">
+              <div>가벽 그래픽 · 브랜드 영상</div>
+              <figcaption>02 / 가벽 디테일</figcaption>
+            </figure>
+            <figure className="image-placeholder editorial-mid">
+              <div>테이블 위 디스플레이<br />서비스 화면 구성</div>
+              <figcaption>03 / 테이블 구성</figcaption>
+            </figure>
+            <figure className="image-placeholder editorial-small">
+              <div>화면 · 굿즈 · 재질<br />클로즈업</div>
+              <figcaption>04 / 전시 디테일</figcaption>
+            </figure>
+          </div>
+        </section>
         <Split
           title={
             <>
-              L-shaped walls.
-              <br />One clear sequence.
+              하나의 테이블 위에서,
+              <br />문제 해결 경험을 전시로 연결했습니다.
             </>
           }
-          sub="제한된 전시 공간에서 서비스를 어떻게 순서대로 읽힐까?"
+          sub="브랜드 인지부터 서비스 흐름까지, 관람객의 시선이 머무는 순서를 설계했습니다."
         >
           <p>
             정면 3000 × 2400mm와 측면 1000 × 2400mm의 ㄱ자 가벽, 1500 ×
