@@ -259,7 +259,7 @@ nav a:hover::after {
 
 /* PLEV exhibition opener — temporary editorial image plan for the live exhibition. */
 .exhibition-editorial {
-  width:var(--content);
+  width:calc(100% - 40px);
   margin:28px auto 0;
 }
 .exhibition-editorial figure { margin:0; }
@@ -285,7 +285,7 @@ nav a:hover::after {
   font-size:12px;
   line-height:1.5;
 }
-.editorial-wide > div { height:clamp(400px,48vw,820px); }
+.editorial-wide > div { height:clamp(460px,54vw,980px); }
 .editorial-row {
   display:grid;
   grid-template-columns:1.15fr 1.3fr .85fr;
@@ -293,13 +293,13 @@ nav a:hover::after {
   gap:clamp(18px,2.2vw,40px);
   margin-top:clamp(48px,7vw,112px);
 }
-.editorial-tall > div { height:clamp(310px,33vw,540px); }
-.editorial-mid > div { height:clamp(250px,25vw,420px); }
-.editorial-small > div { height:clamp(180px,17vw,300px); }
+.editorial-tall > div { height:clamp(350px,36vw,620px); }
+.editorial-mid > div { height:clamp(280px,28vw,480px); }
+.editorial-small > div { height:clamp(210px,20vw,340px); }
 .detail .exhibition-editorial + .split { padding-top:clamp(120px,14vw,220px); }
 
 @media (max-width:900px) {
-  .exhibition-editorial { width:calc(100% - 2*var(--gutter)); margin-top:12px; }
+  .exhibition-editorial { width:calc(100% - 40px); margin-top:12px; }
   .editorial-wide > div { height:56vw; min-height:260px; }
   .editorial-row { grid-template-columns:1fr 1fr; gap:18px; margin-top:52px; }
   .editorial-tall > div, .editorial-mid > div { height:44vw; min-height:180px; }
