@@ -389,3 +389,121 @@ nav a:hover::after {
   .booth-study h2 { font-size:34px; }
   .booth-drawings { margin-top:68px; }
 }
+
+/* PLEV type scale — Korean serif and sans roles are separated intentionally. */
+:root {
+  --font-sans:"Noto Sans KR", sans-serif;
+  --font-serif-en:"Lora", serif;
+  --font-serif-kr:"Noto Serif KR", "Batang", serif;
+}
+.detail { font-family:var(--font-sans); }
+.detail .intro .micro,
+.detail .booth-study .micro,
+.detail .web-build .micro,
+.detail .composition > h3,
+.detail .sequence > h3 {
+  font-size:11px;
+  font-weight:500;
+  line-height:1.5;
+  letter-spacing:.1em;
+}
+.detail .intro h1 {
+  font-family:var(--font-serif-en);
+  font-weight:500;
+  font-size:clamp(44px,3.55vw,56px);
+  line-height:1.06;
+  letter-spacing:-.045em;
+}
+.detail .intro h2 {
+  margin-top:14px;
+  color:var(--strong);
+  font-family:var(--font-sans);
+  font-size:18px;
+  font-weight:600;
+  line-height:1.5;
+  letter-spacing:-.035em;
+}
+.detail .intro p:not(.micro),
+.detail .facts {
+  font-size:13px;
+  font-weight:400;
+  line-height:1.72;
+  letter-spacing:-.02em;
+}
+.detail .split h2 {
+  color:var(--head);
+  font-family:var(--font-serif-kr);
+  font-size:clamp(32px,2.75vw,44px);
+  font-weight:500;
+  line-height:1.32;
+  letter-spacing:-.065em;
+}
+.detail .split h3 {
+  margin-top:20px;
+  color:var(--strong);
+  font-family:var(--font-sans);
+  font-size:16px;
+  font-weight:600;
+  line-height:1.55;
+  letter-spacing:-.035em;
+}
+.detail .split > div:last-child,
+.detail .booth-study-intro > p,
+.detail .composition-grid p,
+.detail .sequence li p,
+.detail .web-build .web-lead {
+  color:var(--body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.82;
+  letter-spacing:-.025em;
+}
+.detail .booth-study h2,
+.detail .web-build h2 {
+  font-family:var(--font-serif-en);
+  font-weight:500;
+  line-height:1.12;
+  letter-spacing:-.045em;
+}
+.detail .composition-grid h3,
+.detail .sequence li b,
+.detail .web-build li h3 {
+  color:var(--strong);
+  font-family:var(--font-sans);
+  font-size:17px;
+  font-weight:600;
+  line-height:1.48;
+  letter-spacing:-.035em;
+}
+.detail .display-specs p,
+.detail .booth-specs dd,
+.detail .web-build li > p:last-child {
+  font-size:13px;
+  font-weight:400;
+  line-height:1.7;
+  letter-spacing:-.02em;
+}
+.detail .display-specs b,
+.detail .booth-specs dt {
+  font-weight:600;
+  letter-spacing:.06em;
+}
+.detail figcaption,
+.detail .sequence-caption {
+  color:var(--muted);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:.01em;
+}
+.detail .project-link {
+  font-family:var(--font-sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+@media (max-width:900px) {
+  .detail .intro h1 { font-size:42px; }
+  .detail .split h2 { font-size:32px; }
+  .detail .intro h2 { font-size:17px; }
+}
