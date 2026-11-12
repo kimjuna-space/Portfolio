@@ -196,7 +196,7 @@ const studies = [
   [
     "01",
     "CNC Truck Prototype",
-    "부품 도면부터 가공·조립까지 직접 검토하며 구조와 제작 가능성을 확인한 실물 제작 기록",
+    "구조와 조립 방식을 검토하며 전시 오브제 제작에 필요한 제작 단위와 재료 결합 방식을 익힌 실물 제작 기록",
     <>
       <Program tone="solid">SolidWorks</Program>{" "}
       <Program tone="cad">AutoCAD</Program>
@@ -207,7 +207,7 @@ const studies = [
   [
     "02",
     "Product Reverse Engineering",
-    "실제 제품을 분해·실측해 형태와 결합 관계를 3D 모델과 부품 도면으로 재구성한 작업",
+    "형태와 결합 구조를 해석하며 공간 속 집기·오브제의 디테일을 설계하는 기반을 탐구한 작업",
     <>
       <Program tone="solid">SolidWorks</Program>{" "}
       <Program tone="cad">AutoCAD</Program>
@@ -218,18 +218,18 @@ const studies = [
   [
     "03",
     "Sand Art Clock",
-    "모래의 질감과 흐름을 재료·디테일의 언어로 해석한 공간 제품 콘셉트",
+    "재료의 질감과 빛의 반응을 관찰하며 공간 분위기를 만드는 제품 요소를 탐구한 콘셉트 작업",
     <>
       <Program tone="rhino">Rhino</Program>{" "}
       <Program tone="keyshot">KeyShot</Program>
     </>,
     "제품 모델링 · 렌더링",
-    ["clock-render.webp", "clock-detail.webp", "clock-board.webp"],
+    ["clock-render-v2.webp", "clock-detail-v2.webp", "clock-board-v2.webp"],
   ],
   [
     "04",
     "Blender Spatial Studies",
-    "실내와 야외 장면을 모델링하며 빛·재질·시점에 따라 달라지는 공간 인지를 탐구",
+    "빛·재질·시점에 따른 장면의 인상 차이를 실험하며 공간의 분위기와 시각적 집중점을 설계한 스터디",
     <Program tone="blender">Blender</Program>,
     "3D 모델링 · 재질 · 조명",
     ["blender-house.webp", "blender-outdoor.webp"],
@@ -251,7 +251,7 @@ function Archive() {
             <p className="tools">프로그램&nbsp;&nbsp;{tools}</p>
             <p className="equipment">사용 장비&nbsp;&nbsp;{equipment}</p>
           </div>
-          <div className="study-images">
+          <div className={`study-images ${title === "Blender Spatial Studies" ? "blender-study-images" : ""}`}>
             {imgs.map((x) => (
               <figure className="study-frame" key={x}>
                 <img src={A + x} />
@@ -378,21 +378,21 @@ function PV5() {
         <Intro />
         <section className="exhibition-editorial" data-reveal aria-label="PLEV exhibition image layout">
           <figure className="image-placeholder editorial-wide">
-            <div>전시 전체 전경<br />정면 또는 사선 촬영</div>
-            <figcaption>01 / 전체 구성 · ㄱ자 가벽과 테이블이 함께 보이는 장면</figcaption>
+            <img src={A + "plev-exhibition-overview-temp.webp"} />
+            <figcaption>01 / 전시 공간 시각화 · ㄱ자 가벽과 모듈 테이블의 전체 구성</figcaption>
           </figure>
           <div className="editorial-row">
             <figure className="image-placeholder editorial-tall">
-              <div>가벽 그래픽 · 브랜드 영상</div>
-              <figcaption>02 / 가벽 디테일</figcaption>
+              <img src={A + "plev-exhibition-display-temp.webp"} />
+              <figcaption>02 / 수직 디스플레이와 가벽 그래픽</figcaption>
             </figure>
             <figure className="image-placeholder editorial-mid">
-              <div>테이블 위 디스플레이<br />서비스 화면 구성</div>
-              <figcaption>03 / 테이블 구성</figcaption>
+              <img src={A + "plev-exhibition-table-temp.webp"} />
+              <figcaption>03 / 테이블 위 멀티 디스플레이 구성</figcaption>
             </figure>
             <figure className="image-placeholder editorial-small">
-              <div>화면 · 굿즈 · 재질<br />클로즈업</div>
-              <figcaption>04 / 전시 디테일</figcaption>
+              <img src={A + "plev-exhibition-detail-temp.webp"} />
+              <figcaption>04 / 디바이스·정보 카드 디테일</figcaption>
             </figure>
           </div>
         </section>
